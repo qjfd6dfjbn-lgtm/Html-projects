@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+   function ask() {
+      let name = prompt("What is your name?");
+      alert("Hello, " + name + "!" + " Welcome to my website!");
+      document.getElementById("para").innerHTML = "Hello, " + name + "!" + " Thanks for visiting my website!";    
+   }
+
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="Codeck_favicon.png" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Your+Font+Name&display=swap" rel="stylesheet">
+  <!-- other stylesheets here -->
+</head>
+
+<style>
+
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 38px;
+   background-image: url('background.svg');
+   background-size: cover; /* or 'contain' depending on the look you want */
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.title-banner-wrapper {
+   text-align: center;
+   height: 200px;
+   max-width: 50%;
+    margin: 24px auto 12px;
+   margin: 24px auto 12px;;
+}
+
+div {
+   border-radius: 16px;
+   height: auto;
+   margin: 0 auto;
+   width: 300px;
+   background-color: aqua;
+   border: blue;
+   transition: 1s;
+}
+
+div:hover {
+   background-color: rgb(0, 255, 255);
+   scale: 1.1;
+}
+.title-img {
+   width: 50%;
+   height: 70%;
+   display: block;
+   margin: 0 auto 16px;
+}
+
+h1, h3 {
+   color: blue;
+   font-family: 'inter', sans-serif;
+   font-size: xx-large;
+   text-align: center;
+}
+
+h2 {
+   font-size: x-large;
+   font-family: 'inter', sans-serif;
+   text-align: center;
+}
+
+p {
+    font-size: large;
+    font-family: 'inter', sans-serif; 
+    text-align: center;  
+}
+button {
+   font-size: large;
+   background-color: red;
+   color: rgb(211, 196, 196);
+   cursor: pointer;
+}
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   font-size: large;
+   font-family: 'inter', sans-serif;
+   overflow: visible;
+   background-color: rgb(90, 149, 156);
+   border-radius: 16px;
+   display: flex;
+   position: sticky;
+   top: 0;
+}
+
+ul li {
+   float: left;
+   background-color: rgb(8, 24, 250);
+   color: rgb(10, 38, 250);
+   border-radius: 16px;
+}
+
+ul li a {
+   display: block;
+   color: rgb(28, 29, 28);
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   transition: background-color 0.2s ease-out, transform 0.2s ease-out;
+}
+
+ul li a:hover:not(.active) {
+   background-color: rgb(196, 196, 194);
+   border-radius: 16px;
+    scale: 1.2;
+}
+
+ul li a.active {
+   background-color: rgb(169, 168, 165);
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+.dropbtn {
+   cursor: pointer;
+   border-radius: 16px;
+}
+
+img {
+   height: 40px;
+   width: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(0, 4, 255);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 16px;
+}
+
+.dropdown-content a {
+  color: rgb(9, 5, 19);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #7a2f2f;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+</head>
+<body>
+<div class="title-banner-wrapper">
+  <img src="Favicon_CODECK.svg" alt="Codeck title banner" class="title-img">
+  <h1>Codeck</h1>
+</div>
+<ul>
+   <li><a href="Cody's_website.html">Home</a></li>
+   <li><a href="news.html">News</a></li>
+   <li class="dropdown">
+   <a href="#blog" class="dropbtn">Blog</a>
+   <div class="dropdown-content">
+   <a href="blog1.html">About us</a>
+   </div>
+   </li>
+</ul>
+
+<h2>We want to make programing more fun for everyone!!!</h2>
+<p>This is our first website and won't be the last!!!!</p>
+<p>The sky is the limit for what we can create
+    ! We are excited to share our journey with you!
+     Feel free to explore and have fun!</p>
+<h3>Our team</h3>
+<h1>Cody Kniedler, Head of company and developing</h1>
+<p>Copyright © 2023 Codeck. All rights reserved.</p>
+</body>
+
+
+</html>

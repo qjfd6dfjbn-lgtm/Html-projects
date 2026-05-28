@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    function copyMessage() {
+      const text = document.getElementById('copyText').textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert('Message copied to clipboard.');
+        }).catch(() => {
+          alert('Clipboard copy failed. Try again.');
+        });
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        alert('Message copied to clipboard.');
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Your+Font+Name&display=swap" rel="stylesheet">
+  <!-- other stylesheets here -->
+  <style>
+  body {
+     margin: 0;
+     padding: 0;
+     font-size: 38px;
+     background-image: url('background.svg');
+     background-size: cover; /* or 'contain' depending on the look you want */
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+  }
+
+  .title-banner-wrapper {
+     text-align: center;
+     margin: 24px auto 12px;
+     max-width: 200px;
+  }
+
+  .title-img {
+     width: auto;
+     max-width: 50%;
+     height: auto;
+     display: block;
+     margin: 0 auto 18px;
+  }
+
+  h1, h3 {
+     color: blue;
+     font-size: xx-large;
+     font-family: "inter", sans-serif;
+     text-align: center;
+  }
+h2 {
+   font-family: "inter", sans-serif;
+   font-size: x-large;
+   text-align: center;
+}
+
+p {
+   font-family: "inter", sans-serif;
+   font-size: large;
+   text-align: center;
+}
+div{
+   border-radius: 16px;
+   width: 50%;
+   margin: 0 auto;
+   text-align: center;
+   background-color: rgb(229, 231, 231);
+   border: rgb(0, 229, 255);
+   transition: 1s;
+}
+
+div:hover {
+   background-color: rgb(0, 255, 255);
+   scale: 1.1;
+}
+button {
+   font-size: large;
+   background-color: red;
+   color: rgb(211, 196, 196);
+   cursor: pointer;
+   border-radius: 16px;
+   font-family: "inter", sans-serif;
+   text-align: center;  
+}
+
+
+
+ul {
+   list-style-type: none;
+   font-size: large;
+   font-family: "inter", sans-serif;
+   margin: 0;
+   padding: 0;
+   overflow: visible;
+   background-color: rgb(40, 103, 113);
+   display: flex;
+   border-radius: 16px;
+   position: sticky;
+   top: 0;
+}
+
+ul li {
+   float: left;
+   background-color: rgb(13, 0, 255);
+   color: rgb(19, 17, 17);
+   border-radius: 16px;
+}
+
+ul li a {
+   display: block;
+   color: rgb(14, 14, 6);
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   transition: background-color 0.2s ease-out, transform 0.2s ease-out;
+}
+
+ul li a:hover:not(.active) {
+   background-color: rgb(217, 218, 210);
+   border-radius: 16px;
+   scale: 1.2;
+}
+
+ul li a.active {
+   background-color: rgb(204, 204, 200);
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+   border-radius: 16px;
+}
+
+.dropbtn {
+   cursor: pointer;
+   border-radius: 16px;
+}
+
+iframe {
+   border-radius: 16px;
+   text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(38, 0, 255);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 16px;
+}
+
+.dropdown-content a {
+  color: rgb(21, 26, 39);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #afb724;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+</head>
+<body>
+<div class="title-banner-wrapper">
+  <img src="Favicon_CODECK.svg" alt="Codeck title banner" class="title-img">
+   <h1>Codeck</h1>
+</div>
+<ul>
+   <li><a href="Cody's_website.html">Home</a></li>
+   <li><a href="news.html">News</a></li>
+   <li class="dropdown">
+   <a href="blog1.html" class="dropbtn">Blog</a>
+   <div class="dropdown-content">
+   <a href="blog1.html">About us</a>
+   </div>
+   </li>
+</ul>
+<h1>We are corporation that builds for better</h1>
+
+<h2>We design Html websites, Python Ai models, and more!</h2>
+<div>
+<h3>Contact us at: </h3>
+<h4 id="copyText">codekingonly1@gmail.com</h4>
+<h5>Press the button to copy the email address.</h5>
+<button type="button" onclick="copyMessage()">---------------</button>
+</div>
+<p>Copyright © 2023 Codeck. All rights reserved.</p>
+</body>
+
+</html>
